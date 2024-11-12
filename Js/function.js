@@ -1,5 +1,5 @@
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () =&gt; {
         const username = localStorage.getItem("username");
         const apellido = localStorage.getItem("apellido");
         const userMenu = document.getElementById("user-menu");
