@@ -45,7 +45,7 @@ body{
 }
 
 
-/* nav */
+/* . . . . . ╰──╮────────────────── NAV ──────────────────╭──╯ . . . . .*/
 
 .nav{
   --padding-container:0;
@@ -96,7 +96,7 @@ body{
   display: var(--show, none);
 }
 
-/* hero container */ 
+/* ?. . . . . ╰──╮────────────────── HERO CONTAINER ──────────────────╭──╯ . . . . .*/ 
 
 .hero__container {
   max-width: 2000px;
@@ -123,8 +123,7 @@ body{
   flex-direction: column;
   align-items: center; 
 }
-/* hero container */ 
-
+ 
 .hero__container {
   max-width: 2000px;
   display: grid;
@@ -151,7 +150,8 @@ body{
   align-items: center; 
   
 }
-/*Boton*/
+
+/* !. . . . . ╰──╮────────────────── BOTON ──────────────────╭──╯ . . . . .*/
 
   .cta{
     display: inline-block;
@@ -163,7 +163,8 @@ body{
     border-radius: 32px;
   }
 
-/* about */
+
+  /*~ . . . . . ╰──╮────────────────── ABOUT ──────────────────╭──╯ . . . . .*/
 
 .about{
   text-align: center;
@@ -191,11 +192,11 @@ body{
 }
 
 .about__paragraph {
-  color: rgb(0, 0, 0); /* Cambia el color del párrafo a blanco */
+  color: rgb(0, 0, 0); 
 }
 
 .about__price {
-  color: red; /* Cambia el color del precio a rojo */
+  color: red; 
 }
 
 .about__icons{
@@ -212,7 +213,7 @@ body{
   width: 300px;
 }
 
-/* knowledge */
+/* ! . . . . . ╰──╮────────────────── ACERCA DE ──────────────────╭──╯ . . . . .*/
 
 .knowledge{
   background: linear-gradient(120deg, #FF003C, #FABE28)  
@@ -239,7 +240,7 @@ body{
   display: block;
 }
 
-/* Slider */
+/* TODO:. . . . . ╰──╮────────────────── SLIDER ──────────────────╭──╯ . . . . .*/
 
 *{
   margin: 0px;
@@ -273,7 +274,7 @@ body{
 }
 
 .card-container {
-  padding: 16px; /* Add padding to the container */
+  padding: 16px; 
 }
 
 .card-container h3{
@@ -303,7 +304,7 @@ body{
   background-color: #7c879e; 
 }
 
-/* Footer */
+/*. . . . . ╰──╮────────────────── FOOTER ──────────────────╭──╯ . . . . .*/
 
 .footer{
   background-color: #0b0f18;
@@ -317,6 +318,7 @@ body{
 
 .footer__title, .footer__newsletter{
   color: #fff;
+  
 }
 
 
@@ -327,6 +329,7 @@ body{
   align-items: center;
   border-bottom: 1px solid #fff;
   padding-bottom: 60px;
+  color: #fff;
 }
 
 .nav--footer{
@@ -342,12 +345,14 @@ body{
   margin: 0;
   margin-right: 20px;
   flex-wrap: wrap;
+  
 }
 
 .footer__inputs{
   margin-top: 10px;
   display: flex;
   overflow: hidden;
+  
 }
 
 .footer__input{
@@ -383,6 +388,7 @@ body{
 
 .footer__copyright{
   font-weight: 300;
+  color: #fff;
 }
 
 .footer__icons{
@@ -391,6 +397,7 @@ body{
 
 .footer__img{
   width: 30px;
+  color: #fff;
 }
 
 

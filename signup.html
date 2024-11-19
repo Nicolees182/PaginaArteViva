@@ -1,51 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 </head>
 <body>
+    <h1>Registro</h1>
+    <form id="formRegistro">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <input type="email" id="correo" placeholder="Correo electronico" required>
+        <input type="password" id="contrasena" placeholder="Contrasena" required>
+        
+        <select id="genero" required>
+            <option value="" disabled selected>Seleccione género</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
 
-    <form>
-        <label for="username">Nombre</label>
-    <input type="text" id="username" placeholder="" required>
+        <button type="submit" id="submit">Registrarse</button>
+    </form>
 
-    <label for="Apellido">Apellido</label>
-    <input type="text" id="Apellido" placeholder="" required>
-
-    <label for="Correo electronico">Correo electronico</label>
-    <input type="text" id="Correo electronico" placeholder="" required>
-
-    <label for="password">Contraseña</label>
-    <input type="password" id="password" placeholder="" required>
-    <div class="box-visible">
-        <input type="checkbox" id="visible">
-        <label for="visible">Mostrar contraseña</label>
-    </div>
-
-    <label>Genero</label>
-    <div>
-        <div class="SeleccionGenero" onclick="selectGender('Hombre')">
-            <img src="./images/MALE.svg" alt="">
-            <input type="radio" name="genero" class="inputRegistro"  value="masculino" id="masculino">
-        </div>
-
-        <div class="SeleccionGenero" onclick="selectGender('Mujer')">
-            <img src="./images/FEMALE.svg" alt="">
-            <input type="radio" name="genero" class="inputRegistro"  value="femenino" id="femenino">
-           
-        </div>
-    </div>
-    <input type="hidden" id="Genero" required>
-
-    <button type="submit" id="submit">Registrarse</button>
-    </form>    
-    <script src="./Js/signup.js"></script> 
+    <p>¿Ya tienes cuenta en ArteViva?</p> 
+    <a href="login.html">Inicia sesion</a>
+    
+    <script src="./Js/signup.js"></script>
 </body>
 </html>

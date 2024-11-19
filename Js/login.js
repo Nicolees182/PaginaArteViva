@@ -1,27 +1,26 @@
-const $submit = document.getElementById("submit"),
-      $password = document.getElementById("password"),
-      $username = document.getElementById("Correo electronico"),
-      $visible = document.getElementById("visible");
+const usuarios = [
+    { correo: "nic@gmail.com", contrasena: "123", nombre: "Nicole", apellido: "Castellanos" },
 
-      
-      document.addEventListener("change", (e)=>{
-        if (e.target === $visible){
-            if($visible.checked === false) $password.type = "password";
-            else $password.type = "text";
-        }
-    });
+];
 
-document.addEventListener("click", (e)=>{
-    if (e.target === $submit){
-        if($password.value !== "" && $username.value !== ""){
-            e.preventDefault();
-            localStorage.setItem("username", $username.value);
-            window.location.href = "index.html";
-        }
+document.getElementById("formLogin").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const correo = document.getElementById("correoLogin").value;
+    const contrasena = document.getElementById("contrasenaLogin").value;
+
+    console.log("Correo ingresado:", correo);
+    console.log("Contrasena ingresada:", contrasena);
+
+    const usuarioRegistrado = JSON.parse(localStorage.getItem("UsuarioRegistrado"));
+
+    if (usuarioRegistrado && usuarioRegistrado.correo === correo && usuarioRegistrado.contrasena === contrasena) {
+        
+        
+        localStorage.setItem("username", usuarioRegistrado.nombre);
+        localStorage.setItem("apellido", usuarioRegistrado.apellido);
+        window.location.href = "index.html";
+    } else {
+        window.location.href = "signup.html";
     }
-}); 
-
-
-
-
-
+});

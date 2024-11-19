@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArteViva</title>
-    <link rel="shortcut icon" href="./images/cowboyyyy.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/Artevivas.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="testimony.css">
@@ -42,8 +42,6 @@
                         <a href="signup.html">Registrarse</a>
                     </nav>
                 </li>
-        
-                <img src="images/x.svg" alt="" class="nav__close">
             </ul>
             
             <div class="nav__menu">
@@ -199,30 +197,29 @@
     </footer>  
 
     <script>
-      
         document.addEventListener("DOMContentLoaded", () => {
             const userMenu = document.getElementById("user-menu");
             const username = localStorage.getItem("username");
             const apellido = localStorage.getItem("apellido");
     
             if (username) {
-                
                 userMenu.innerHTML = `
-                    <span class="nav__links">Hola, ${username}</span>
-
+                    <span class="nav__links">Hola, ${username} ${apellido}</span>
                     <a href="#" id="logout" class="nav__links"> Cerrar sesión </a>
                 `;
-    
                 
                 document.getElementById("logout").addEventListener("click", (e) => {
                     e.preventDefault(); 
                     localStorage.removeItem("username");
-                    
+                    localStorage.removeItem("apellido");
                     window.location.reload(); 
                 });
             }
         });
     </script>
+
+   
+
 </body>
 </html>   
 
